@@ -1,12 +1,11 @@
 from pydantic_ai import Agent
-from pydantic_ai.models.openai import OpenAIModel
+from llm import ollama_model
 
-# ollama serve llama3.1
-ollama_model = OpenAIModel(model_name="llama3.1", base_url="http://localhost:11434/v1", api_key='test-api-key')
-agent = Agent(  
-    ollama_model,
-    system_prompt='Be concise, reply with one sentence.',  
-)
+agent = Agent(ollama_model, system_prompt='Be concise, reply with one sentence.')
 
-result = agent.run_sync('explain bayesian optimization in laymens term')  
-print(result.data)
+question = "explain bayesian optimization in laymens term"
+result = agent.run_sync(question)
+answer = result.data
+
+print(f"Q: {question}")
+print(f"A: {answer}")

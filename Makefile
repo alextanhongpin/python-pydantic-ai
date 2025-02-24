@@ -1,5 +1,5 @@
 run:
-	uv run main.py
+	uv run $(name)
 
 
 install:
