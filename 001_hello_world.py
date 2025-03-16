@@ -1,4 +1,5 @@
 from pydantic_ai import Agent
+
 from llm import ollama_model
 
 agent = Agent(ollama_model, system_prompt="Be concise, reply with one sentence.")

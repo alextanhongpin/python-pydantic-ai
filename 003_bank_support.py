@@ -1,8 +1,10 @@
 from dataclasses import dataclass
-from pydantic_ai import Agent, RunContext
-from llm import ollama_model
-from pydantic import BaseModel, Field
 from typing import Mapping, Union
+
+from pydantic import BaseModel, Field
+from pydantic_ai import Agent, RunContext
+
+from llm import ollama_model
 
 
 @dataclass

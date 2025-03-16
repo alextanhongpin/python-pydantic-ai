@@ -1,7 +1,8 @@
-from llm import ollama_model
 from datetime import date
+
 from pydantic_ai import Agent, RunContext
 
+from llm import ollama_model
 
 agent = Agent(
     ollama_model,

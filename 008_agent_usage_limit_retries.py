@@ -1,8 +1,10 @@
-from llm import ollama_model
+from typing import TypedDict
+
 from pydantic_ai import Agent, ModelRetry
 from pydantic_ai.exceptions import UsageLimitExceeded
 from pydantic_ai.usage import UsageLimits
-from typing import TypedDict
+
+from llm import ollama_model
 
 
 class NeverResultType(TypedDict):

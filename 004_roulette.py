@@ -1,4 +1,5 @@
 from pydantic_ai import Agent, RunContext
+
 from llm import ollama_model
 
 roulette_agent = Agent(

@@ -1,6 +1,6 @@
-from llm import ollama_model
 from pydantic_ai import Agent
 
+from llm import ollama_model
 
 agent = Agent(ollama_model)
 

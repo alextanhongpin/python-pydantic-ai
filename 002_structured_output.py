@@ -1,7 +1,7 @@
 # This example demonstrate the ability of the llm to produce structured output.
 from pydantic import BaseModel
-
 from pydantic_ai import Agent
+
 from llm import ollama_model
 
 

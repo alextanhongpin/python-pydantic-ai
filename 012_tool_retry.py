@@ -1,7 +1,9 @@
 from dataclasses import dataclass
-from llm import ollama_model
+
 from pydantic import BaseModel
-from pydantic_ai import Agent, RunContext, ModelRetry
+from pydantic_ai import Agent, ModelRetry, RunContext
+
+from llm import ollama_model
 
 
 @dataclass

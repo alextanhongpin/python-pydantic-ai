@@ -1,8 +1,8 @@
-from llm import ollama_model
 from pydantic_ai import Agent
 from pydantic_ai.exceptions import UsageLimitExceeded
 from pydantic_ai.usage import UsageLimits
 
+from llm import ollama_model
 
 agent = Agent(ollama_model)
 
