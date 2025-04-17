@@ -6,7 +6,7 @@ import sys
 from pydantic_ai import RunContext
 
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir))
-from llm import ollama_agent
+from llm import ollama_agent, separator
 
 agent = ollama_agent(
     deps_type=str,
@@ -29,6 +29,9 @@ def get_player_name(ctx: RunContext[str]) -> str:
 
 
 dice_result = agent.run_sync("My guess is 4", deps="Anne")
-print(dice_result.data)
 
+separator("Result")
+print(dice_result.output)
+
+separator("Messages")
 pprint.pp(dice_result.all_messages())
