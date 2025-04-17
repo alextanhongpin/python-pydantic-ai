@@ -1,3 +1,7 @@
+marimo:
+	uv run marimo edit
+
+
 run:
 	uv run $(name)
 

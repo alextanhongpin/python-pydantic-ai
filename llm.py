@@ -1,10 +1,9 @@
 from pydantic_ai import Agent
-from pydantic_ai.models.instrumented import InstrumentationSettings, InstrumentedModel
+from pydantic_ai.models.instrumented import InstrumentationSettings
 from pydantic_ai.models.openai import OpenAIModel
 from pydantic_ai.providers.openai import OpenAIProvider
 
 instrumentation_settings = InstrumentationSettings(event_mode="logs")
-
 Agent.instrument_all(instrumentation_settings)
 
 # ollama serve llama3.1
